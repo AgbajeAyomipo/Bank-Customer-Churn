@@ -6,7 +6,7 @@ import yaml
 import joblib
 
 def featurize() -> None:
-    os.chdir('../')
+    os.chdir('C:/Users/Ayo Agbaje/Desktop/Bank-Customer-Churn')
     with open('params.yaml') as config_:
         config__ = yaml.safe_load(config_)
     
