@@ -1,0 +1,24 @@
+base:
+  random_state: 42
+  test_size: .25
+
+data:
+  load_data_path: 'C:/Users/Ayo Agbaje/Desktop/Bank-Customer-Churn/data/raw/Churn_Modelling.csv'
+  _train_path: 'C:/Users/Ayo Agbaje/Desktop/Bank-Customer-Churn/data/processed'
+  x_train_path: 'C:/Users/Ayo Agbaje/Desktop/Bank-Customer-Churn/data/processed/xtrain.csv'
+  x_test_path: 'C:/Users/Ayo Agbaje/Desktop/Bank-Customer-Churn/data/processed/xest.csv'
+  y_train_path: 'C:/Users/Ayo Agbaje/Desktop/Bank-Customer-Churn/data/processed/ytrain.csv'
+  y_test_path: 'C:/Users/Ayo Agbaje/Desktop/Bank-Customer-Churn/data/processed/ytest.csv'
+
+train:
+  params:
+    _n_estimators: 100
+    _learning_rate: 0.1
+    max_depth: 4
+
+model:
+  path_: 'C:/Users/Ayo Agbaje/Desktop/Bank-Customer-Churn/models'
+  out_path: 'C:/Users/Ayo Agbaje/Desktop/Bank-Customer-Churn/models/model.joblib'
+
+metric:
+  path: 'C:/Users/Ayo Agbaje/Desktop/Bank-Customer-Churn/metrics'
