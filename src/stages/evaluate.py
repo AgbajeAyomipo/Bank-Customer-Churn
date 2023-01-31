@@ -42,6 +42,7 @@ def evaluate() -> None:
         indent = 4,
         sort_keys=True
     )
+    print("Successful")
 
 if __name__ == '__main__':
     evaluate()
