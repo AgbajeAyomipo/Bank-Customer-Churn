@@ -26,6 +26,8 @@ def featurize() -> None:
     df_['Geography'] = df_['Geography'].map(geo_map)
     df_['Gender'] = df_['Gender'].map(gender_map)
 
+    df_.to_csv(config__['data']['_train_path'] + '/features.csv')
+
     print('Features Successfully updated')
 
 if __name__ == '__main__':
