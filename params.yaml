@@ -1,6 +1,6 @@
 base:
   random_state: 42
-  test_size: 0.2
+  test_size: 0.3
 
 data:
   load_data_path: C:/Users/Ayo Agbaje/Desktop/Bank-Customer-Churn/data/raw/Churn_Modelling.csv
@@ -12,9 +12,9 @@ data:
 
 train:
   params:
-    _n_estimators: 20
-    _learning_rate: 0.00111122231
-    max_depth: 2
+    _n_estimators: 100
+    _learning_rate: 0.001
+    max_depth: 4
 
 model:
   path_: C:/Users/Ayo Agbaje/Desktop/Bank-Customer-Churn/models
