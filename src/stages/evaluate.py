@@ -42,6 +42,7 @@ def evaluate() -> None:
         indent = 4,
         sort_keys=True
     )
+    plt.savefig(config__['metric']['path'] + '/confusion_matrix.png')
     print("Successful")
 
 if __name__ == '__main__':
