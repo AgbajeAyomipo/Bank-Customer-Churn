@@ -29,3 +29,41 @@ stages:
     - path: data/processed/ytrain.csv
       md5: a00341c3dca48d563fe33c20fa9643a7
       size: 59194
+  data_load:
+    cmd: python src/stages/data_load.py
+    deps:
+    - path: data/raw/Churn_Modelling.csv
+      md5: 7321aa9a1e24a9e139f42124f736b415
+      size: 684858
+  train:
+    cmd: python src/stages/train.py
+    deps:
+    - path: data/processed/xtrain.csv
+      md5: 2c38619edabefcbfb7bcc174ce79b578
+      size: 951150
+    - path: data/processed/ytrain.csv
+      md5: a00341c3dca48d563fe33c20fa9643a7
+      size: 59194
+    outs:
+    - path: models/model.joblib
+      md5: 52dc2f8d06035bfc073473f0e85a17aa
+      size: 155608
+  evaluate:
+    cmd: python src/stages/evaluate.py
+    deps:
+    - path: data/processed/xest.csv
+      md5: c9d19edc95dd83500a374e28ec5f631b
+      size: 316957
+    - path: data/processed/ytest.csv
+      md5: ad51dabd36d993cd53860657a5e81546
+      size: 19714
+    - path: models/model.joblib
+      md5: 52dc2f8d06035bfc073473f0e85a17aa
+      size: 155608
+    outs:
+    - path: metrics/confusion_matrix.png
+      md5: 73906d99d504096562160ec1e10aa06d
+      size: 22628
+    - path: metrics/metrics.json
+      md5: 102ef7e849ce7f8d005f950316cf6637
+      size: 110

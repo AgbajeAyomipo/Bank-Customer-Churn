@@ -32,7 +32,7 @@ stages:
     - data/processed/ytest.csv
     - models/model.joblib
     outs:
-    - metrics.confusion_matrix.png:
+    - metrics/confusion_matrix.png:
         cache: false
     metrics:
     - metrics/metrics.json:
