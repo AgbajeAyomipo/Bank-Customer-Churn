@@ -27,11 +27,13 @@ def evaluate() -> None:
     preds_ = model.predict(X_test)
 
     roc = roc_auc_score(y_true = y_test, y_score = preds_)
-    # accuracy_score_ = accuracy_score(y_true = y_test, y_pred = preds_)
-    # precision_score_ = precision_score(y_true = y_test, y_pred = preds_)
+    accuracy_score_ = accuracy_score(y_true = y_test, y_pred = preds_)
+    precision_score_ = precision_score(y_true = y_test, y_pred = preds_)
 
     _metric = {
-        'roc': roc
+        'roc': roc,
+        'accuracy_score': accuracy_score_,
+        'precision_score': precision_score_
     }
 
     json.dump(
