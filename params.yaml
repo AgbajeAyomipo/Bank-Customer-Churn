@@ -12,9 +12,9 @@ data:
 
 train:
   params:
-    _n_estimators: a
-    _learning_rate: b
-    max_depth: c
+    _n_estimators: 1
+    _learning_rate: 0.1
+    max_depth: 4
 
 model:
   path_: C:/Users/Ayo Agbaje/Desktop/Bank-Customer-Churn/models
