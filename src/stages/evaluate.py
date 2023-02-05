@@ -44,7 +44,7 @@ def evaluate() -> None:
     )
     fig, ax = plt.subplots(nrows = 1, ncols = 1, figsize=(10, 10))
     ConfusionMatrixDisplay.from_predictions(y_true = y_test, y_pred = preds_, cmap = 'gist_gray', display_labels = ['NO', 'YES'], ax = ax)
-    plt.savefig(config__['metric']['path'] + '/confusion_matrix.png')
+    plt.savefig(config__['metric']['path'] + '/confuson_matrix.png')
     print("Successful")
 
 if __name__ == '__main__':
