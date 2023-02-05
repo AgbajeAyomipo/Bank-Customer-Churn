@@ -1,5 +1,7 @@
 [core]
     autostage = true
-    remote = my_remote
+    remote = my_new_remote_
 ['remote "my_remote"']
     url = ../my_remote
+['remote "my_new_remote_"']
+    url = ../remote/my_remote
