@@ -33,6 +33,7 @@ def evaluate() -> None:
     _metric = {
         'roc': roc,
         'accuracy_score': accuracy_score_,
+        'precision_score': precision_score_
     }
 
     json.dump(
