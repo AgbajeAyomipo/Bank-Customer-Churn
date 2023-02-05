@@ -35,8 +35,8 @@ def data_split() -> None:
     y_train_df = pd.DataFrame(data = y_train)
     y_test_df = pd.DataFrame(data = y_test)
 
-    x_train_df.to_csv(config__['data']['_train_path'] + '/' + 'xtrain.csv')
-    x_test_df.to_csv(config__['data']['_train_path'] + '/' + 'xest.csv')
+    x_train_df.iloc[:, 0:4].to_csv(config__['data']['_train_path'] + '/' + 'xtrain.csv')
+    x_test_df.iloc[:, 0:4].to_csv(config__['data']['_train_path'] + '/' + 'xest.csv')
     y_train_df.to_csv(config__['data']['_train_path'] + '/' + 'ytrain.csv')
     y_test_df.to_csv(config__['data']['_train_path'] + '/' + 'ytest.csv')
 
