@@ -3,3 +3,36 @@ stages:
     cmd: python src/stages/data_load.py
     deps:
     - data/raw/Churn_Modelling.csv
+  featurze:
+    cmd: python src/stages/featurize.py
+    deps:
+    - data/raw/Churn_Modelling.csv
+    outs:
+    - data/processed/features.csv
+  data_split:
+    cmd: python src/stages/data_split.py
+    deps:
+    - data/processed/features.csv
+    outs:
+    - data/processed/xest.csv
+    - data/processed/xtrain.csv
+    - data/processed/ytest.csv
+    - data/processed/ytrain.csv
+  train:
+    cmd: python src/stages/train.py
+    deps:
+    - data/processed/xtrain.csv
+    - data/processed/ytrain.csv
+    outs:
+    - models/model.joblib
+  evaluate:
+    cmd: python src/stages/evaluate.py
+    deps:
+    - data/processed/xest.csv
+    - data/processed/ytest.csv
+    - models/model.joblib
+    plots:
+      - metrics/confusion_matrix.png
+    metrics:
+    - metrics/metrics.json:
+        cache: false

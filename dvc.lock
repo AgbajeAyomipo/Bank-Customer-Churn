@@ -67,3 +67,13 @@ stages:
     - path: metrics/metrics.json
       md5: 102ef7e849ce7f8d005f950316cf6637
       size: 110
+  featurze:
+    cmd: python src/stages/featurize.py
+    deps:
+    - path: data/raw/Churn_Modelling.csv
+      md5: 7321aa9a1e24a9e139f42124f736b415
+      size: 684858
+    outs:
+    - path: data/processed/features.csv
+      md5: 79d278ff0d09f72450de4bfb50d9b643
+      size: 438977
