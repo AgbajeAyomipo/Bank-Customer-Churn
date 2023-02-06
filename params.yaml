@@ -13,7 +13,7 @@ data:
 train:
   params:
     _n_estimators: 1
-    _learning_rate: 0.1
+    _learning_rate: 1
     max_depth: 4
 
 model:
